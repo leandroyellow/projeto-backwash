@@ -1,0 +1,820 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@100;400;700&family=Rubik:wght@400;600&display=swap');
+
+:root{
+   --amarelo: #FFCA0F;
+   --preto: #000;
+   --cinzaClaro: #f4f4f4;
+   --cinza: #d4d4d4;
+   --branco: #fff;
+   --fontCadastro: 'Montserrat', sans-serif;
+   --fontPromocao: 'Rubik', sans-serif;
+   --fontPrincipal: 'Poppins', sans-serif;
+}
+
+*{
+   padding: 0px;
+   margin: 0px;
+   box-sizing: border-box;
+   font-size: 14px;
+   font-family: var(--fontPrincipal);
+}
+
+.container{
+   max-width: 1450px;
+   margin: auto;
+}
+
+.button-branco, .button-preto{
+   text-decoration: none;
+   padding: 25px 70px;
+   border-radius: 40px;
+   text-transform: uppercase;
+   font-weight: 600;
+}
+
+.button-branco{
+   border: 1px solid var(--branco);
+   color: var(--preto);
+   background-color: var(--branco);
+}
+
+.button-preto{
+   border: 1px solid var(--preto);
+   color: var(--branco);
+   background-color: var(--preto);
+}
+
+.titulo-branco, .titulo-preto{
+   font-size: 18px;
+   text-transform: uppercase;
+   font-weight: 100;
+   font-weight: 500;
+}
+
+.desc-branco, .desc-preto{
+   font-size: 64px;
+   
+   font-weight: 700;
+}
+.titulo-preto{
+   color: var(--preto);
+}
+.titulo-branco{
+   color: var(--branco);
+}
+.desc-preto{
+   color: var(--preto);
+}
+.desc-branco{
+   color: var(--branco);
+}
+
+
+/* header tarja */
+.tarja{
+   background-color: var(--preto);
+   height: 40px;
+}
+.header-tarja{
+   display: flex;
+   justify-content: space-between;
+   padding: 4px 0px;
+   align-items: center;
+}
+.header-tarja .left img{
+   padding-right: 10px;
+}
+.header-tarja .center p{
+   text-transform: uppercase;
+   font-family: var(--fontPromocao);
+   color: var(--branco);
+   font-size: 1rem;
+}
+.header-tarja .right img{
+   padding-left: 10px;
+}
+
+/* header menu */
+.header-menu{
+   display: flex;
+   justify-content: space-between;
+   height: 110px;
+   align-items: center;
+}
+.header-menu .menu ul{
+   display: flex;
+}
+.header-menu .menu li{
+   list-style: none;
+}
+.header-menu .menu a{
+   text-decoration: none;
+   padding: 20px;
+   text-transform: uppercase;
+   color: var(--preto);
+   font-weight: 700;
+}
+.header-menu .menu a:hover{
+   text-shadow: 1px 1px #6c6c6c;
+}
+.header-menu .carrinho{
+   display: flex;
+   align-items: center;
+}
+.header-menu .carrinho div{
+   display: flex;
+   align-items: center;
+   border: 1px solid var(--cinza);
+   padding: 5px;
+}
+.header-menu .carrinho input{
+   outline: 0;
+   border: 0;
+   margin-left: 8px;
+}
+.header-menu .carrinho img{
+   padding-left: 15px;
+}
+.moble-menu{
+   display: none;
+}
+
+/* section desconto */
+.section-desconto{
+   background-color: var(--cinzaClaro);
+}
+.section-desconto .desconto{
+   display: flex;
+   
+   align-items: center;
+}
+.section-desconto .desconto p{
+   margin-right: 20px;
+   font-family: var(--fontPromocao);
+   font-size: 16px;
+}
+.section-desconto .desconto a.button-preto{
+   padding: 10px 20px;
+   margin: 10px;
+}
+
+/* section lançamento */
+.section-lancamento{
+   height: 100vh;
+}
+.section-lancamento .lancamento{
+   display: flex;
+   position: relative;
+   height: 100%;
+}
+.section-lancamento .left{
+   flex: 6;
+   background-image: url(../../media/image1.jpg);
+   background-position: right;
+   background-size: cover;
+}
+.section-lancamento .center{
+   background-color: var(--preto);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: auto;
+   position: absolute;
+   top: 222px;
+   left: 232px;
+   bottom: 0;
+   right: 0;
+   
+   max-width: 490px;
+   max-height: 244px;
+}
+.section-lancamento .center-conteudo{
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   padding: 30px;
+   width: 485px;
+}
+.section-lancamento .center-conteudo::after{
+   content: '';
+   display: block;
+   position: absolute;
+   margin-top: 215px;
+   margin-left: 305px;
+   border: 45px solid;
+   border-color: var(--preto) transparent transparent transparent;
+}
+.section-lancamento .conteudo{
+   position: relative;
+}
+.section-lancamento .conteudo .desc-branco{
+   padding-bottom: 20px;
+   line-height: 70px;
+}
+.section-lancamento .center-conteudo .posicao-botao{
+   display: flex;
+   justify-content: center;
+   position: absolute;
+   bottom: -40px;
+   left: 30px;
+}
+.section-lancamento .right{   
+   flex: 5;
+   background-image: url(../../media/image2.jpg);
+   background-position: center;
+   background-size: cover;
+}
+
+/* section mais vendido */
+.section-mais-vendido{
+   padding: 30px 0px;
+}
+.section-mais-vendido h3{
+   font-size: 24px;
+   font-weight: 600;
+   text-transform: uppercase;
+}
+.section-mais-vendido .mais-vendido{
+   max-width: 1380px;
+   overflow: hidden;
+   margin: auto;
+}
+.section-mais-vendido .sliders{
+   width: 1000vw;
+   height: 100%;
+}
+.section-mais-vendido .slide{
+   width: 330px;
+   height: 100%;
+   display: inline-block;
+   background-color: var(--branco);
+   margin: 10px;
+}
+.section-mais-vendido .slide-area{
+   display: flex;
+   flex-direction: column;
+}
+.section-mais-vendido .slide-area .img img{
+   height: 100%;
+   width: 100%;
+}
+.section-mais-vendido .slide-area .titulo h3, .section-mais-vendido .slide-area .preco h3{
+   font-size: 16px;
+   padding-top: 10px;
+}
+.section-mais-vendido .slide-area .pagamento h3{
+   color: var(--cinza);
+   font-size: 12px;
+}
+
+/* section coleção */
+.section-colecao{
+   background-image: url(../../media/image7.jpg);
+   height: 710px;
+   background-position: center;
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   padding-bottom: 100px;
+   margin-bottom: 20px;
+}
+.text-padrao div{
+   display: inline-block;
+   padding-left: 50px;
+}
+.text-padrao div .titulo-branco{
+   padding-bottom: 10px;
+}
+.text-padrao .desc-branco{
+   padding-bottom: 40px;
+}
+
+
+/* section oculos relogio */
+.section-oculos-relogio{
+   display: flex;
+}
+.section-oculos-relogio .left, .section-oculos-relogio .right{
+   height: 700px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   padding-bottom: 100px;
+   background-position: center;
+   background-size: cover;
+}
+.section-oculos-relogio .left{
+   flex: 1;
+   background-image: url(../../media/image8.jpg);
+   margin-right: 20px;
+}
+.section-oculos-relogio .right{
+   flex: 2;
+   background-image: url(../../media/image9.jpg);
+}
+
+/* section lançamento */
+.section-lancamento-tenis{
+   display: flex;
+}
+.section-lancamento-tenis .left{
+   height: 700px;
+   flex: 2;
+   background-image: url(../../media/image10.jpg);
+   background-position: center;
+   background-size: cover;
+   margin-right: 85px;
+   margin-top: 20px;
+}
+.section-lancamento-tenis .right{
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+}
+.section-lancamento-tenis .right div p{
+   padding-bottom: 80px;
+   font-size: 18px;
+   padding-right: 40px;
+}
+
+/* section coleção lancamento */
+.section-colecao-lancamento{
+   display: flex;
+   margin-top: 30px;
+}
+.section-colecao-lancamento .left, .section-colecao-lancamento .right{
+   background-position: center;
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   height: 700px;
+   justify-content: flex-end;
+   padding-bottom: 80px;
+}
+.section-colecao-lancamento .left{
+   flex: 2;
+   background-image: url(../../media/image15.jpg);
+   margin-right: 20px;
+   padding-left: 50px;
+}
+.section-colecao-lancamento .right{
+   flex: 1;
+   background-image: url(../../media/image16.jpg);
+   align-items: center;
+}
+.section-colecao-lancamento .button{
+   margin-top: 30px;
+}
+
+/* section marcas */
+.section-marcas{
+   margin-top: 40px;
+}
+.section-marcas h4{
+   font-size: 24px;
+}
+.section-marcas .marcas{
+   display: flex;
+   text-align: center;
+   flex-wrap: wrap;
+}
+.section-marcas .marcas div{
+   flex: 1;
+   margin: 20px;
+}
+
+/* footer */
+footer{
+   background-color: var(--preto);
+}
+/* section receba novidade */
+.section-receba-novidade{
+   text-align: center;
+   padding: 50px 20px;
+   border-bottom: 1px solid var(--cinza);
+}
+.section-receba-novidade h3{
+   font-size: 30px;
+   text-transform: uppercase;
+   color: var(--branco);
+   font-weight: bold;
+}
+.section-receba-novidade p{
+   font-size: 17px;
+   padding-top: 7px;
+   color: var(--branco);
+}
+.section-receba-novidade form{
+   display: flex;
+   flex-direction: column;
+   margin-top: 20px;
+   align-items: center;
+}
+.section-receba-novidade form input,
+.section-receba-novidade form button{
+   display: inline-block;
+}
+.section-receba-novidade form input{
+   width: 700px;
+   outline: 0;
+   border: 1px solid var(--cinza);
+   border-radius: 40px;
+   padding: 17px;
+}
+.section-receba-novidade form button{
+   text-transform: uppercase;
+   background-color: var(--amarelo);
+   color: var(--preto);
+   margin-top: 20px;
+   padding: 17px 50px;
+   border-radius: 40px;
+   font-weight: bold;
+}
+
+
+/* section sobre */
+.section-sobre{
+   display: flex;
+   margin-top: 50px;
+   padding-bottom: 50px;
+   border-bottom: 1px solid var(--cinza);
+}
+.section-sobre h4{
+   font-size: 18px;
+   color: var(--branco);
+   text-transform: uppercase;
+   margin-bottom: 20px;
+}
+.section-sobre .left, .section-sobre .right{
+   flex: 1;
+}
+.section-sobre .grid{
+   display: grid;
+   grid-template-areas: 
+      "sobre ajuda"
+      "pagamento pagamento"
+   ;
+}
+.section-sobre .grid .sobre{
+   grid-area: sobre;
+}
+.section-sobre .grid .ajuda{
+   grid-area: ajuda;
+}
+.section-sobre .grid .pagamento{
+   grid-area: pagamento;   
+   height: 226px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   align-items: flex-start;
+}
+.section-sobre .grid .pagamento div{
+   background-image: url(../images/pagamento.png);
+   background-position: center;
+   background-size: cover;
+   height: 30px;
+   width: 515px;
+}
+.section-sobre .grid ul li a{
+   text-decoration: none;
+   color: var(--branco);
+   font-size: 18px;
+}
+.section-sobre .right .titulo{
+   display: flex;
+   align-items: center;
+   margin-bottom: 20px;
+}
+.section-sobre .right .titulo h4{
+   margin: 0px 0px 0px 10px;
+}
+.section-sobre .right .imgs{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-gap: 10px;
+}
+
+.section-seguranca{
+   display: flex;
+   padding: 50px 0px;
+}
+.section-seguranca div.seg{
+   flex: 1;
+}
+.section-seguranca p{
+   color: var(--branco);
+   font-size: 14px;
+   padding-right: 10px;
+}
+.section-seguranca div.img{
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:451px) and (max-width: 1200px){
+   .moble-menu{
+      display: block;
+   }
+   .header-menu .menu, .header-menu .carrinho div{
+      display: none;
+   }
+   .header-menu{
+      justify-content: space-around;
+   }
+   .section-lancamento .center{
+      top: 0;
+      left: 0;
+   }
+   .section-mais-vendido .mais-vendido{
+      max-width: 700px;
+   }
+   .section-colecao{
+      background-image: url(../../media/image17.jpg);
+      margin: 10px 20px;
+   }
+   .text-padrao{
+      align-items: center;
+   }
+   .text-padrao div{
+      padding-left: 0
+   }
+   .section-oculos-relogio{
+      flex-direction: column;
+      display: block;
+   }
+   .section-oculos-relogio .left, .section-oculos-relogio .right{
+      flex: none;
+      margin: 10px 20px;
+      padding-left: 0;
+   }
+   .section-oculos-relogio .left{
+      background-image: url(../../media/image8pq.jpg);
+   }
+   .section-oculos-relogio .right{
+      background-image: url(../../media/image9pq.jpg);
+   }
+   .section-lancamento-tenis{
+      display: block;
+   }
+   .section-lancamento-tenis .left, .section-lancamento-tenis .right{
+      flex: none;
+   }
+   .section-lancamento-tenis .left{
+      background-image: url(../../media/image10pq.jpg);
+      margin: 10px 20px;
+   }
+   .section-lancamento-tenis .right{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 20px;
+      margin-bottom: 20px;
+   }
+   .section-lancamento-tenis .right div p{
+      text-align: center;
+   }
+   .section-colecao-lancamento{
+      display: block;
+   }
+   .section-colecao-lancamento .left, .section-colecao-lancamento .right{
+      margin: 10px 20px;
+      align-items: center;
+      flex: none;
+   }
+   .section-colecao-lancamento .left{
+      background-image: url(../../media/image15pq.jpg);
+   }
+   .section-colecao-lancamento .right{
+      background-image: url(../../media/image16pq.jpg);
+   }
+   .section-colecao-lancamento .button{
+      margin-top: 30px;
+   }
+   footer{
+      padding: 0px 10px;
+   }
+   .section-sobre{
+      flex-direction: column-reverse;
+   }
+   .header-menu .menu{
+      display: none;
+      position: absolute;
+      z-index: 99;
+      background-color: rgba(0, 0, 0, 0.8);
+      width: 70vw;
+      height: calc(100vh - 150px);
+      top: 150px;
+      left: 0px;
+   }
+   .header-menu .menu ul{
+      flex-direction: column;
+   }
+   .header-menu .menu ul li{
+      margin: 30px;
+      text-align: center;
+   }
+   .header-menu .menu ul li a{
+      color: var(--branco);
+      font-size: 30px;
+   }
+
+}
+
+
+@media (max-width: 450px){
+   .header-tarja .left, .header-tarja .right{
+      display: none;
+   }
+   .header-tarja {
+      justify-content: center;
+   }
+   .moble-menu{
+      display: block;
+   }
+   .header-menu .menu, .header-menu .carrinho div{
+      display: none;
+   }
+   .header-menu{
+      justify-content: space-around;
+   }
+   .section-desconto .desconto p{
+      margin: 10px;
+      font-size: 12px;
+   }
+   .section-desconto .desconto a.button-preto{
+      width: 185px;
+      font-size: 10px;
+   }
+   .section-lancamento .center{
+      top: 0;
+      left: 0;
+      max-width: 325px;
+      max-height: 185px;
+   }
+   .titulo-branco, .titulo-preto{
+      font-size: 14px;
+   }
+   .desc-branco, .desc-preto{
+      font-size: 40px;
+   }
+   .section-lancamento .conteudo .desc-branco{
+      line-height: 50px;
+      font-size: 40px;
+   }
+   .section-lancamento .center-conteudo::after{
+      margin-top: 162px;
+      margin-left: 201px;
+   }
+   .button-branco, .button-preto{
+      padding: 25px 50px;
+   }
+   .section-lancamento .lancamento{
+      flex-direction: column-reverse;
+   }
+   .section-mais-vendido .mais-vendido{
+      max-width: 350px;
+   }
+   .section-colecao{
+      background-image: url(../../media/image17.jpg);
+      margin: 10px 20px;
+   }
+   .text-padrao{
+      align-items: center;
+   }
+   .text-padrao div{
+      padding-left: 0
+   }
+   .section-oculos-relogio{
+      flex-direction: column;
+      display: block;
+   }
+   .section-oculos-relogio .left, .section-oculos-relogio .right{
+      flex: none;
+      margin: 10px 20px;
+      padding-left: 0;
+   }
+   .section-oculos-relogio .left{
+      background-image: url(../../media/image8pq.jpg);
+   }
+   .section-oculos-relogio .right{
+      background-image: url(../../media/image9pq.jpg);
+   }
+   .section-lancamento-tenis{
+      display: block;
+   }
+   .section-lancamento-tenis .left, .section-lancamento-tenis .right{
+      flex: none;
+   }
+   .section-lancamento-tenis .left{
+      background-image: url(../../media/image10pq.jpg);
+      margin: 10px 20px;
+   }
+   .section-lancamento-tenis .right{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 20px;
+      margin-bottom: 20px;
+   }
+   .section-lancamento-tenis .right div p{
+      text-align: center;
+   }
+   .section-colecao-lancamento{
+      display: block;
+   }
+   .section-colecao-lancamento .left, .section-colecao-lancamento .right{
+      margin: 10px 20px;
+      align-items: center;
+      flex: none;
+   }
+   .section-colecao-lancamento .left{
+      background-image: url(../../media/image15pq.jpg);
+   }
+   .section-colecao-lancamento .right{
+      background-image: url(../../media/image16pq.jpg);
+   }
+   .section-colecao-lancamento .button{
+      margin-top: 30px;
+   }
+   .section-marcas .marcas div{
+      margin: 20px 50px;
+   }
+   footer{
+      padding: 0px 10px;
+   }
+   .section-sobre{
+      flex-direction: column-reverse;
+   }
+   .section-sobre .right .img img{
+      width: 77px;
+      height: auto;
+   }
+   .section-receba-novidade h3{
+      font-size: 25px;
+   }
+   .section-receba-novidade form input{
+      width: 300px;
+   }
+   .section-sobre .grid .pagamento div{
+      background-image: url(../images/pagamentopq.png);
+      height: 65px;
+      width: 260px;
+   }
+   .section-sobre .grid .sobre, .section-sobre .grid .ajuda{
+      text-align: center;
+      padding-top: 10px;
+   }
+   .section-sobre .grid .pagamento{
+      justify-content: center;
+      align-items: center;
+   }
+   .section-seguranca{
+      flex-direction: column-reverse;
+   }
+   .section-seguranca p{
+      text-align: center;
+      padding: 10px;
+   }
+   .section-seguranca div.copy{
+      display: none;
+   }
+   .header-menu .menu{
+      display: none;
+      position: absolute;
+      z-index: 99;
+      background-color: rgba(0, 0, 0, 0.8);
+      width: 70vw;
+      height: calc(100vh - 150px);
+      top: 150px;
+      left: 0px;
+   }
+   .header-menu .menu ul{
+      flex-direction: column;
+   }
+   .header-menu .menu ul li{
+      margin: 30px;
+      text-align: center;
+   }
+   .header-menu .menu ul li a{
+      color: var(--branco);
+      font-size: 20px;
+   }
+}
